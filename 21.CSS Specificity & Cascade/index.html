@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* Element selector → Specificity = 0-0-1 (1) */
+        h1 {
+            color: blue;
+        }
+
+        /* Class selector → Specificity = 0-1-0 (10) */
+        .green {
+            color: green;
+        }
+
+        /* Class selector → Specificity = 0-1-0 (10) */
+        .red {
+            color: red;
+        }
+
+        /* Class selector → Specificity = 0-1-0 (10) */
+        /* If class selectors tie, the last one wins (source order matters) */
+        .maroon {
+            color: maroon;
+        }
+
+        /* ID selector → Specificity = 1-0-0 (100) */
+        #purple {
+            color: purple;
+        }
+
+        /* Attribute selector → Specificity = 0-1-0 (10) */
+        [data-x="a"] {
+            color: orange;
+        }
+
+        /* Element + Class selector → Specificity = 0-1-1 (11) */
+        h1.red {
+            color: red;
+        }
+
+        /* !important overrides all normal rules, even inline styles */
+        /* This will force the text color to be black regardless of inline or ID styles */
+        h1 {
+            color: black !important;
+        }
+
+        /* Question: What  will the Specificity be? */
+        /* a.harryclass.rohan-class[href]:hover {
+            color: red;
+        } */
+        /* 1 (element) + 20 (classes) + 10 (attribute) + 10 (pseudo-class) = 41*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- Inline style → Specificity = 1-0-0-0 (1000), but overridden by !important rule -->
+        <!-- Final computed color = black (due to !important on h1 rule) -->
+        <h1 style="color:aqua" id="purple" class="green red maroon" data-x="a">
+            CSS Specificity with !important
+        </h1>
+        <!-- Total Specificity (excluding inline): 100 (ID) + 30 (classes) + 10 (attribute) + 1 (element) = 141 -->
+        <!-- Inline style (1000) normally wins, but is overridden by !important rule in h1 -->
+    </div>
+</body>
+
+</html>
