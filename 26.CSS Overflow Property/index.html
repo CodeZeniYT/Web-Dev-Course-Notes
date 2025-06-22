@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OverFlow Property | Css</title>
+</head>
+<style>
+    * {
+        margin-right: 20px;
+    }
+
+    /* Scoll Overflow property */
+    .scroll {
+        width: 30vh;
+        height: 50vw;
+        border: 2px solid black;
+        overflow: scroll;
+        display: inline-block;
+
+        .scrollp {
+            font-size: 20px;
+            background-color: gray;
+            text-decoration: underline;
+        }
+    }
+
+    /* Auto Overflow property */
+    .auto {
+        width: 30vh;
+        height: 50vw;
+        border: 2px solid black;
+        overflow: auto;
+        display: inline-block;
+
+        .autop {
+            font-size: 20px;
+            background-color: gray;
+            text-decoration: underline;
+        }
+    }
+
+    /* WhietSpace No wrap property */
+    .whitespace {
+        width: 30vh;
+        height: 50vw;
+        border: 2px solid black;
+        overflow-x: scroll;
+        white-space: nowrap;
+        display: inline-block;
+
+        .whitespacep {
+            font-size: 20px;
+            background-color: gray;
+            text-decoration: underline;
+        }
+    }
+
+    .box {
+        width: 30vh;
+        height: 50vw;
+        border: 2px solid black;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        overflow: auto;
+    }
+    /* Ellipsis test-overflow property */
+
+    .ellipsis {
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: 2px solid black;
+        padding: 5px;
+        font-size: 18px;
+    }
+ /* Clip Overflow property  */
+    .clip {
+        width: 30vh;
+        height: 30vw;
+        border: 2px solid black;
+        display: inline-block;
+        overflow:auto;
+        overflow-x:hidden;
+        overflow-y: scroll;
+        /* or */
+        overflow: hidden scroll;
+        /* means this is x and this y */
+
+        .clipp {
+            font-size: 20px;
+            background-color: gray;
+            text-decoration: underline;
+        }
+    }
+
+</style>
+
+<body>
+    <!-- Scoll Overflow property -->
+    <div class="scroll">
+        <h1>Scroll OverFlow Property</h1>
+        <p class="scrollp">Using scroll overflow means when the text come out from given width or height then optimize
+            it in box with scrollbar important if text dont not overflow then scroll will visible forever</p>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quas fugiat iusto cupiditate doloremque
+            commodi iste maxime vitae repellat ullam vel sit nisi inventore, optio animi nulla quos dignissimos
+            consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+    </div>
+    <!-- Auto overflow Property -->
+    <div class="auto">
+        <h1>Auto Overflow Property</h1>
+        <p class="autop">Using Auto Overflow property means when the text overflow from box then add scroll bar in that
+            and if there is no text overflowing then dont add scroll bar</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam architecto suscipit ipsam id animi delectus,
+            reiciendis, minus placeat modi labore eius, repellendus eos. Blanditiis nobis repudiandae id inventore
+            officia cumque quasi ad nam. Facilis, deleniti ullam. Nisi magnam vero impedit!</p>
+    </div>
+    <!-- WhiteSpace: nowrap Property -->
+    <div class="whitespace">
+        <h1>WhiteSpace No wrap Property</h1>
+        <p class="whitespacep">Using WhiteSpace No wrap mean display the text in horizontal way with scroll bar</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, quod impedit sunt assumenda obcaecati
+            cupiditate similique ad, ea aliquam, repellat enim odit! Aspernatur, alias. Explicabo qui quis debitis
+            similique, quidem est reprehenderit cupiditate nobis eos voluptates alias adipisci voluptatem quae non
+            illum, facere ipsa. Molestiae?</p>
+    </div>
+    <!-- Text Overflow ellipsis Property -->
+    <div class="box">
+        <h1>Text Overflow ellipsis Property</h1>
+
+        <!-- This paragraph will be ellipsed -->
+        <p class="ellipsis">Using Text Overflow ellipsis means when the text overflow from box then add three dots at
+            the end of text</p>
+
+        <!-- Normal paragraph (no ellipsis needed) -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur deleniti quod impedit quo aliquid
+            recusandae doloribus obcaecati? Molestias deleniti itaque asperiores reiciendis? In repudiandae odio tempore
+            inventore deleniti asperiores ut alias sit similique modi, dicta quis iste eaque neque enim, nam magni
+            temporibus tempora!</p>
+    </div>
+    <!-- Clip Overflow property -->
+    <div class="clip">
+        <h1>Clip Overflow Property</h1>
+        <p class="clipp">Using Clip Overflow means when the text overflow from box then hide the text without adding
+            scroll bar</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur deleniti quod impedit quo aliquid
+            recusandae doloribus obcaecati? Molestias deleniti itaque asperiores reiciendis? In repudiandae odio tempore
+            inventore deleniti asperiores ut alias sit similique modi, dicta quis iste eaque neque enim, nam magni
+            temporibus tempora!</p>
+    </div>
+
+
+
+</body>
+
+</html>

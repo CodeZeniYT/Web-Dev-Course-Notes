@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            border: 2px solid blue;
+            display: inline-block;
+            padding: 24px;
+            margin: 10px;
+            background-color: rgb(3, 235, 204);
+       
+        }
+        .box1{
+ /* display: none; to remove both inline and block element property  */
+      visibility: hidden; /* to hide the elemnet  with leaving space of it*/
+
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+         <h1>I am box</h1>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, qui.</p>
+    </div>
+    <div class="box">and a inlined css box and to test some unwanted test in it that we can't do in box1</div>
+</body>
+
+</html>
