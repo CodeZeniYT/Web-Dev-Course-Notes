@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Float & Clear</title>
+</head>
+<style>
+    .card {
+        border: 2px solid rgb(241, 10, 10);
+    }
+
+    img {
+        float: right;
+    }
+    .cards{
+        border: 2px solid rgb(3, 3, 3);
+        display: flow-root;
+    }
+    .card:nth-child(3){
+        background-color: red;
+        clear:both;
+    }
+</style>
+
+<body>
+    <div class="cards">
+        <img src="img.png" alt="">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates distinctio culpa quasi natus
+                possimus itaque illum doloremque saepe qui beatae nesciunt odio dolorum assumenda temporibus esse
+                officiis a, ab dignissimos voluptatibus modi dolor nobis expedita alias. Doloribus laboriosam deleniti
+                fugit.</p>
+        </div>
+
+        <div class="card">card 2</div>
+        <div class="card">card 3</div>
+    </div>
+</body>
+
+</html>

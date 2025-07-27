@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .box:first-child {
+            background-color: blue;
+        }
+
+        .box:nth-child(3) {
+            background-color: red;
+        }
+
+        .box:last-child {
+            background-color: yellow;
+        }
+
+        .box:nth-child(2):first-line {
+            background-color: gray;
+        }
+
+        .boxes * {
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid gray;
+        }
+
+        .box,
+        [data-space="primary"] {
+            margin-top: 5px;
+        }
+
+        .box:nth-child(even) {
+            color: rgb(25, 0, 255);
+        }
+
+        .box:nth-child(odd) {
+            color: rgb(90, 168, 16);
+        }
+
+        .box:nth-last-child(1) {
+            font-family: cursive;
+            font-size: 23px;
+        }
+
+        .boxes::before {
+            font-size: 45px;
+            content: "More on Css Selector";
+            background-color: rgb(236, 214, 214);
+            padding: 10px;
+            border-bottom: 2px solid rgb(12, 134, 190);
+            border-radius: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .boxes::after {
+            font-size: 45px;
+            content: "End";
+            background-color: rgb(236, 214, 214);
+            padding: 10px;
+            border-top: 5px solid rgb(12, 134, 190);
+            border-radius: 15px;
+            color: rgb(255, 255, 255);
+            font-family: cursive;
+        }
+
+        /* or .box::selection for only div */
+        ::selection {
+            color: black;
+            background-color: rgb(19, 240, 240);
+        }
+
+        .boxes::first-letter {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font: 900;
+            background-color: red;
+            padding: 5px;
+        }
+
+        .box::first-letter {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font: 900;
+            background-color: rgb(95, 199, 176);
+            padding: 5px;
+        }
+
+        input::placeholder {
+            color: gray;
+            font-size: 18px;
+            padding: 15px;
+            background-color: rgb(119, 86, 86);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">I am Ist Box</div>
+        <div class="box" data-space="primary">I am 2nd Box. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Excepturi in eum facilis reiciendis libero doloremque tempore est expedita temporibus ab iure dignissimos
+            iusto quae, culpa eligendi, id iste animi. Aut ad numquam id molestiae veritatis sed architecto nemo
+            reiciendis dolores? </div>
+        <div class="box">I am 3rd Box.</div>
+        <div class="box" data-space="primary">I am 4th Box.</div>
+        <div class="box">I am 5th Box.</div>
+        <div class="box">I am 6th Box.</div>
+        <input type="text" placeholder="Enter you name here">
+    </div>
+</body>
+
+</html>

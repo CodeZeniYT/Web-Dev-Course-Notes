@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transforms MasterClass</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        .content {
+            height: auto;
+            width: 80vw;
+            margin: auto;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #1e293b;
+        }
+
+        .box {
+            height: 60px;
+            width: 100px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+        }
+
+        /* Box 1 - Basic Rotation */
+        .box1:hover {
+            transform: rotate(90deg);
+            /* Rotates element 90 degrees clockwise */
+        }
+
+        /* Box 2 - Using "turn" unit for rotation */
+        .box2:hover {
+            transform: rotate(1.55turn);
+            /* 1 turn = 360deg */
+        }
+
+        /* Box 3 - 3D Rotation */
+        .box3:hover {
+            transform: rotateX(150deg) rotateY(40deg) rotateZ(60deg);
+        }
+
+        /* Box 4 - Scale Effect */
+        .box4:hover {
+            transform: scale(1.25);
+            /* Increases size by 25% */
+        }
+
+        /* Box 5 - Skew Effect */
+        .box5:hover {
+            transform: skewY(35deg) skewX(20deg);
+            /* Tilts along both axes */
+        }
+
+        /* Box 6 - Translate Effect (Z doesn't work without perspective) */
+        .box6 {
+            perspective: 500px;
+            /* Enable 3D transforms */
+        }
+
+        .box6:hover {
+            transform: translateX(100px) translateY(-45%) translateZ(50px);
+        }
+
+        /* Box 7 - Rotate with origin changed */
+        .box7:hover {
+            transform: rotate(78deg);
+            transform-origin: 50% -60%;
+            /* Changes the pivot point */
+        }
+
+        /* Box 8 - Combined transform */
+        .box8:hover {
+            transform: scale(1.2) rotate(20deg) translateY(-10px);
+        }
+
+        /* Box 9 - Flip effect */
+        .box9:hover {
+            transform: rotateY(180deg);
+        }
+
+        /* Box 10 - Perspective & 3D rotate */
+        .box10 {
+            perspective: 600px;
+        }
+
+        .box10:hover {
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Transform Properties (Hover to See Effects)</h1>
+
+    <div class="content">
+        <div class="box box1">Rotate</div>
+        <div class="box box2">Turn</div>
+        <div class="box box3">3D Rotate</div>
+        <div class="box box4">Scale</div>
+        <div class="box box5">Skew</div>
+        <div class="box box6">Translate</div>
+        <div class="box box7">Origin</div>
+        <div class="box box8">Combo</div>
+        <div class="box box9">Flip Y</div>
+        <div class="box box10">3D Flip X</div>
+    </div>
+    <!-- <iframe src="https://piechat.vercel.app/signup" frameborder="12" height="550px" ></iframe> -->
+
+</html>

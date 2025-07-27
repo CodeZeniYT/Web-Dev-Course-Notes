@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Part-2</title>
+    <style>
+        .conatiner {
+            background-color: blueviolet;
+            height: 50vh;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: linear-gradient(270deg, #0ff0b3, #00ecbc, #007adf);
+            width: 15vw;
+            background-size: 600% 600%;
+            height: 10vh;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 10vh;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: x-large;
+            font-weight: 400;
+            animation: Boxanime 3s ease-in-out infinite alternate,
+                boxAnimation 3s ease-in-out infinite alternate,
+                gradientShift 8s ease infinite;
+        }
+
+        .box:after {
+            content: '...';
+            text-overflow: ellipsis;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes Boxanime {
+            0% {
+                background-color: #232526;
+                transform: scale(1.5) rotate(90deg);
+
+            }
+
+            20% {
+                background-color: #414345;
+                transform: scale(1.0) rotate(180deg);
+            }
+
+            50% {
+                transform: scale(1.5) rotate(270deg);
+            }
+
+
+            100% {
+                transform: scale(1.0) rotate(360deg);
+            }
+        }
+
+        @keyframes boxAnimation {
+            from {
+                /* BLANK IT OR */
+                position: relative;
+                top: 200px;
+                background-color: rgb(10, 175, 175);
+            }
+
+            to {
+                position: relative;
+                top: -200px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+        <div class="box">Box</div>
+    </div>
+</body>
+
+</html>

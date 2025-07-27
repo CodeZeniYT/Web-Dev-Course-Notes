@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position Property Demo</title>
+    <style>
+        /* Reset default margin and padding for consistency across browsers */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container to wrap all position boxes */
+        .container {
+            padding: 40px;
+            margin: 20px;
+            border: 2px solid black;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Base style for all boxes */
+        .box {
+            width: 80vh;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid black;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Sticky header: sticks to the top as you scroll */
+        .box1 {
+            background-color: crimson;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 60px;
+        }
+
+        /* Fixed box: stays at the bottom-right corner even when scrolling */
+        .box2 {
+            background-color: seagreen;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            border-radius: 12px;
+            width: 200px;
+            height: 60px;
+            z-index: 3;
+        }
+
+        /* Absolute positioned box: relative to the nearest positioned ancestor (here: container) */
+        .box3 {
+            background-color: gold;
+            color: black;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 250px;
+            height: 60px;
+            z-index: 1;
+        }
+
+        /* Regular box using relative position */
+        .box4 {
+            background-color: #ab07f7;
+            position: relative;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sticky box that sticks to the top while scrolling -->
+        <div class="box box1">Sticky (position: sticky)</div>
+
+        <!-- Fixed box that stays at bottom right corner of the screen -->
+        <div class="box box2">Fixed (position: fixed)</div>
+
+        <!-- Absolutely positioned box inside container -->
+        <div class="box box3">Absolute (position: absolute)</div>
+
+        <!-- Relatively positioned box with no offset -->
+        <div class="box box4">Relative (position: relative)</div>
+    </div>
+</body>
+
+</html>

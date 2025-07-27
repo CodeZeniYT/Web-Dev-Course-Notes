@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+</head>
+<style>
+    :root {
+        --primary-color: #14cc9e;
+        --secondary-color: #89eeb3;
+        --content-color: #0bf085;
+        --text-color: #333;
+        --font-family: poppins, sans-serif;
+        --button-bg-color: #9ff0ba;
+        --button-text-color: #23bd75;
+    }
+
+    body {
+        background-color: var(--secondary-color);
+        ;
+        color: var(--text-color);
+        font-family: var(--font-family);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    .nav {
+        background-color: var(--primary-color);
+        position: sticky;
+        z-index: 1;
+        top: 0;
+
+        padding: 10px;
+
+    }
+
+    ul li {
+        list-style: none;
+        padding: 5px;
+    }
+    ul li a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    ul {
+        display: flex;
+
+    }
+
+    .content {
+        background-color: var(--content-color);
+        padding: 100px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 25px;
+        bottom: -50px;
+        position: relative;
+    }
+
+    p {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+
+    .btn {
+        background-color: var(--button-bg-color);
+        border: 2px solid var(--primary-color);
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: medium;
+        color: var(--button-text-color);
+        position: relative;
+        bottom: -50px;
+
+    }
+
+    .btn:hover {
+        background-color: var(--button-text-color);
+        color: var(--button-bg-color);
+        cursor: pointer;
+
+    }
+
+    .footer {
+        background-color: var(--primary-color);
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: -345px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content" id="home">
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple page demonstrating the use of CSS variables.</p>
+        <button class="btn">Click Me</button>
+    </div>
+    <div class="content"id="about">
+        <h1>About Us</h1>
+        <p>We are a company dedicated to providing the best services. lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
+    </div>
+    <div class="content" id="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out! lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="btn">Click Me</button>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 My Website</p>
+    </div>
+
+</body>
+
+</html>

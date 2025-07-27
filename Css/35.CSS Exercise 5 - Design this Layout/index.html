@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Exercise 5 - Design this Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bgcolor: rgb(10, 0, 0);
+            --text-color: rgb(243, 243, 243);
+            --nav-bg: rgb(161, 52, 52);
+            --nav-color: black;
+            --container-color:green;
+            --box-color:indianred;
+            --boxs-color:rgba(116, 169, 238, 0.822);
+            --welcome-color:none;
+            --footer-color:rgb(201, 201, 247);
+            --welcome-border:2px solid white;
+        }
+        body{
+            background-color: var(--bgcolor);
+            color: var(--text-color);
+            color:lightskyblue
+        }
+
+        ul li {
+            list-style: none;
+            display: inline;
+            padding: 20px;
+        }
+
+        ul {
+            text-align: right;
+
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            width: auto;
+
+        }
+
+        nav {
+            background-color: var(--nav-bg);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--nav-color);
+        }
+        .container {
+            background-color:var(--container-color);
+            padding: 20px;
+            text-align: center;
+            margin: 10px 15px 5px 15px;
+        }
+
+        .box {
+            background-color: var(--box-color);
+            padding: 150px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .boxs{
+            background-color: var(--boxs-color);
+        }
+        .welcome {
+            padding: 50px;
+            background-color: var(--welcome-color);
+            border-radius: 25px;
+            margin: 15px 50px 50px 50px;
+            font-size: 35px;
+            border: var(--welcome-border);
+        }
+       img{
+            border-radius: 50px;
+        }
+        .logo{
+            position: fixed;
+            right: 0;
+            z-index: 1;
+            height: auto;
+            bottom: 10px;
+        }
+        footer{
+            background-color: var(--footer-color);
+            padding: 25px;
+            bottom: -5px;
+            position:flex;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box boxs"></div>
+        </div>
+        <div class="welcome">Welcome to My Website. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam,
+            perspiciatis? </div>
+        <div class="logo">
+            <img src="icon.png" alt="logo" width="100px">
+        </div>
+    </section>
+    <footer>&copy; Right By Mayank All Reserved 2025</footer>
+
+</body>
+
+</html>

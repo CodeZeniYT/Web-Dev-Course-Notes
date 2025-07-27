@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid - Ultimate MasterClass part-1</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            height: 250px;
+            width: auto;
+            display: grid;
+            grid-template-columns: [column1]100px [column2] 100px [column3] 100px;
+            grid-template-rows:[row1] 150px [row2] 150px [row3] 150px;
+
+
+        }
+
+        .items {
+            background-color: blueviolet;
+            height: 40px;
+            width: 40px;
+            border: 2px solid gray;
+            padding: 15px;
+            margin: 5px;
+            border-radius: 5px;
+
+
+        }
+
+        .item-1 {
+            grid-row: row2;
+            grid-column: column2;
+        }
+
+        .item-4 {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        .item-2 {
+            grid-column: column3;
+            grid-row: row3;
+        }
+
+        .item-6 {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            /* Or you can do this both are same */
+            /* grid-row-start: 1;*/
+            /*grid-row-end: 2; */
+        }
+
+        .item-7 {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            /* Or you can do this both are same */
+            /* grid-row-start: 1;*/
+            /*grid-row-end: 2; */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="items item-1">1</div>
+            <div class="items item-2">2</div>
+            <div class="items">3</div>
+            <div class="items item-4">4</div>
+            <div class="items">5</div>
+            <div class="items item-6">6</div>
+            <div class="items item-7">7</div>
+            <div class="items">8</div>
+            <div class="items">9</div>
+        </div>
+    </main>
+</body>
+
+</html>

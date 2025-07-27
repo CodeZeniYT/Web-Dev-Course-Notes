@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox - Ultimate MasterClass</title>
+    <style>
+        /* ✅ Common Item Styles */
+        .box {
+            height: 80px;
+            width: 80px;
+            background-color: blueviolet;
+            border-radius: 5px;
+            border: 2px solid white;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ✅ Section 1: Flex Container for Order and Flex Properties */
+        .container {
+            height: 90vh;
+            width: 150vh;
+            display: flex;
+            flex-direction: row;
+            /* Items in row */
+            /* flex-wrap: wrap; */
+            /* Optional wrapping */
+            flex-flow: row row-reverse;
+            /* Short-hand: direction + wrap */
+            align-content: flex-start;
+            /* Align lines when wrapped */
+            gap: 12px 60px;
+            /* row-gap column-gap */
+            border: 2px solid gray;
+            border-radius: 5px;
+            margin-bottom: 40px;
+            padding: 20px;
+            flex-wrap: wrap;
+            /* Make rows to show align-content */
+        }
+
+        /* ✅ Individual Orders & Flex Behaviors */
+        .order-1 {
+            order: 1;
+            flex-grow: 2;
+        }
+
+        .order-2 {
+            order: 2;
+            flex-shrink: 1;
+        }
+
+        .order-3 {
+            order: 3;
+        }
+
+        .order-4 {
+            order: 4;
+        }
+
+        .order-5 {
+            order: 5;
+        }
+
+        .order-6 {
+            order: 6;
+        }
+
+        .order-7 {
+            order: 7;
+        }
+
+        .order-8 {
+            order: 8;
+        }
+
+        .order-9 {
+            order: 9;
+        }
+
+        /* ✅ Section 2: Demonstrate align-self Behavior */
+        .content {
+            height: 90vh;
+            width: 150vh;
+            display: flex;
+            flex-direction: row;
+            flex-flow: row row-reverse;
+            gap: 12px 60px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .item2 {
+            align-self: flex-end;
+            /* Overrides default alignment */
+        }
+
+        /* ✅ Headings */
+        h2 {
+            font-family: sans-serif;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- ✅ SECTION 1: Flexbox with Order, Grow, Shrink -->
+        <section class="section">
+            <h2>1️⃣ Flexbox: Order, Grow & Shrink Demo</h2>
+            <div class="container">
+                <div class="box order-1">1</div>
+                <div class="box order-2">2</div>
+                <div class="box order-3">3</div>
+                <div class="box order-4">4</div>
+                <div class="box order-5">5</div>
+                <div class="box order-6">6</div>
+                <div class="box order-7">7</div>
+                <div class="box order-8">8</div>
+                <div class="box order-9">9</div>
+            </div>
+        </section>
+
+        <!-- ✅ SECTION 2: Flexbox with align-self -->
+        <section class="section">
+            <h2>2️⃣ Flexbox: align-self Demo</h2>
+            <div class="content">
+                <div class="box">1</div>
+                <div class="box item2">2</div> <!-- Aligned to flex-end -->
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

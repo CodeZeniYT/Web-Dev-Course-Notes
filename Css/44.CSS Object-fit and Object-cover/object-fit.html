@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+    <style>
+        .container {
+            background-color: blueviolet;
+            height: 200vh;
+            width: 100vw;
+            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 25vh;
+            width: 25vw;
+
+
+        }
+
+        img {
+            height: 25vh;
+            width: 25vw;
+
+            object-fit: fill
+                /* this is the default value of object-fit property */
+            ;
+
+            /* object-fit: cover
+                /* this will make the image to cover the whole box 
+            ; */
+            object-fit: contain
+                /* this will make the image to fit inside the box while maintaining its aspect ratio */
+            ;
+
+            object-position: top left
+                /* it can be top right botom right or left or just left right and center as your choice what to show */
+            ;
+            /* or.... */
+            object-position: 10px 20px
+                /* this will position the image 10px from the left and 20px from the top and also we can use any type of of value of sizes like vw,vh rem em and %*/
+            ;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"><img
+                src="https://www.sapphirewebsolutions.com/wp-content/uploads/2019/09/Web-Development-Trends.jpg" alt="">
+        </div>
+        <div class="box"><img
+                src="https://www.sapphirewebsolutions.com/wp-content/uploads/2019/09/Web-Development-Trends.jpg" alt="">
+        </div>
+        <div class="box"><img
+                src="https://www.sapphirewebsolutions.com/wp-content/uploads/2019/09/Web-Development-Trends.jpg" alt="">
+        </div>
+        <div class="box"><img
+                src="https://www.sapphirewebsolutions.com/wp-content/uploads/2019/09/Web-Development-Trends.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

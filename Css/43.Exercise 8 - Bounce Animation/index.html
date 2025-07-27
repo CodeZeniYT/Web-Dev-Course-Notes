@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 8 - Bounce Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+        }
+
+        .container {
+            width: 80vw;
+            height: 80vh;
+            background-color: purple;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .ball {
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 50%;
+            animation: bounce 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                background-color: #0cc734;
+            }
+
+            50% {
+                transform: translateY(-200px) translateX(50px);
+                background-color: #0c74c7;
+            }
+
+            75% {
+                transform: translateY(0) translateX(100px);
+                background-color: #0cc734;
+            }
+
+            100% {
+                transform: translateY(-200px) translateX(150px);
+                background-color: #c70c0c;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

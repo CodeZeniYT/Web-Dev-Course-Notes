@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="charset">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Color Website - Portfolio</title>
+    <style>
+        :root {
+            --background-color: rgb(42, 160, 228);
+            --text-color: black;
+            --navcolor:rgb(139, 146, 247);
+            --hovercolor:rgb(15, 170, 241);
+            --bodycolor:rgb(248, 245, 245);
+            --footercolor:gray;
+            --fontstyle:cursive;
+            
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            color: var(--text-color);
+            background-color:var(--bodycolor);
+            font-family:var(--fontstyle);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        header nav {
+            background-color: var(--background-color);
+            padding: 15px;
+            text-align: right;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        li:hover {
+            background-color: var(--hovercolor);
+            border-radius: 8px;
+
+        }
+
+
+
+
+        ul li {
+            display: inline-block;
+            list-style: none;
+            padding: 7px;
+
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .home {
+            background-color: rgb(153, 192, 252);
+            padding: 70px;
+            text-align: center;
+            border-radius: 25px;
+            top: -12px; 
+            margin: 15px 15px 15px 20px;
+        }
+        .home > h1, .home > p{
+            color: var(--text-color);
+            padding: 5px;
+        }
+        .about{
+            padding: 50px;
+            
+        } 
+        .about > h1{
+            padding: 15px;
+            font-size: 35px;
+            background-color: var(--background-color);
+            border-radius: 5px;
+            position: relative;
+            top: -15px;
+        }
+        .about > p{
+            padding: 25px;
+            background-color: var(--background-color);
+        }
+        .container {
+            border: 2px solid rgb(136, 136, 136);
+            width: 325px;
+            height: 500px;
+            margin: 25px;
+            border-radius: 25px;
+            background-color: white;
+            display: inline-block;
+        }
+
+        .content {
+            text-align: center;
+            position: relative;
+            top: 25px;
+            padding: 35px;
+        }
+
+        .btn {
+            background-color: #245cf53a;
+            border-radius: 25px;
+            top: 17px;
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+            position: relative;
+            color: rgb(0, 81, 255);
+            text-align: center;
+            border: 2px solid rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        .tag1 {
+            position: absolute;
+            top: 2px;
+            left: 20px;
+            background-color: #fdfdfd3a;
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: rgb(46, 54, 70);
+            border: 2px solid rgb(48, 55, 71);
+            display: inline-block;
+            text-align: left;
+        }
+
+        .tag2 {
+            position: absolute;
+            top: 2px;
+            right: 161px;
+            background-color: #ffffff3a;
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: rgb(46, 54, 70);
+            border: 2px solid rgb(48, 55, 71);
+            display: inline-block;
+            text-align: left;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: rgb(46, 54, 70);
+            text-align: left;
+        }
+
+        .desc {
+            font-size: 16px;
+            color: rgb(100, 100, 100);
+            margin-top: 10px;
+            text-align: left;
+            letter-spacing: 1px;
+
+        }
+
+        .img {
+            width: 95%;
+            height: 200px;
+            border-radius: 15px;
+            position: relative;
+            right: -9px;
+            top: 9px;
+        }
+        .project > h1{
+            background-color: gray;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px;
+            display: flex;
+        }
+        .project > .container{
+            position: relative;
+            left: 80px
+        }
+        .contact{
+            background-color: var(--background-color);
+            padding: 100px;
+        }
+        .contact > h1{
+            padding: 15px;
+            font-size: 35px;
+            top: 0px;
+        }
+        footer {
+            background-color:var(--footercolor);
+            padding: 25px;
+            text-align: center;
+        }
+   </style>
+</head>
+
+<body>
+    <header>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <div class="home">
+                <h1>Hi, I'm Mayank </h1>
+                <p>I know Html and Css.I use Vscode, cursor , chatgpt and more...</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about">
+                <h1>About</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae fuga blanditiis quas expedita!
+                    Numquam, atque expedita, ipsum sed deserunt delectus accusantium quas perspiciatis ab placeat,
+                    aliquam explicabo blanditiis? Iure, nesciunt corrupti, quaerat beatae suscipit aut asperiores,
+                    molestias inventore debitis dignissimos et voluptas alias est modi minus. Quae a cum ducimus dolores
+                    consequuntur, beatae quibusdam quaerat suscipit?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga officia numquam sapiente?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga officia numquam sapiente?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga officia numquam sapiente?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga officia numquam sapiente?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga officia numquam sapiente?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga officia numquam sapiente?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga officia numquam sapiente?</p>
+            </div>
+        </section>
+        <section class="project" id="project">
+            <div class="project">
+                <h1 class="title">Project</h1>
+                <div class="container">
+                    <img class="img" src="img.png" alt="Card Image">
+                    <div class="content">
+
+                        <div class="tag1">
+                            Html
+                        </div>
+                        <div class="tag2">
+                            Css
+                        </div>
+                        <h1 class="title">Card Title</h1>
+                        <p class="desc">This is a description of the card. It contains some interesting information.
+                            Lorem ipsum
+                            dolor
+                            sit amet consectetur.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <img class="img" src="img.png" alt="Card Image">
+                    <div class="content">
+
+                        <div class="tag1">
+                            Html
+                        </div>
+                        <div class="tag2">
+                            Css
+                        </div>
+                        <h1 class="title">Card Title</h1>
+                        <p class="desc">This is a description of the card. It contains some interesting information.
+                            Lorem ipsum
+                            dolor
+                            sit amet consectetur.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <img class="img" src="img.png" alt="Card Image">
+                    <div class="content">
+
+                        <div class="tag1">
+                            Html
+                        </div>
+                        <div class="tag2">
+                            Css
+                        </div>
+                        <h1 class="title">Card Title</h1>
+                        <p class="desc">This is a description of the card. It contains some interesting information.
+                            Lorem ipsum
+                            dolor
+                            sit amet consectetur.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <img class="img" src="img.png" alt="Card Image">
+                    <div class="content">
+
+                        <div class="tag1">
+                            Html
+                        </div>
+                        <div class="tag2">
+                            Css
+                        </div>
+                        <h1 class="title">Card Title</h1>
+                        <p class="desc">This is a description of the card. It contains some interesting information.
+                            Lorem ipsum
+                            dolor
+                            sit amet consectetur.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <img class="img" src="img.png" alt="Card Image">
+                    <div class="content">
+
+                        <div class="tag1">
+                            Html
+                        </div>
+                        <div class="tag2">
+                            Css
+                        </div>
+                        <h1 class="title">Card Title</h1>
+                        <p class="desc">This is a description of the card. It contains some interesting information.
+                            Lorem ipsum
+                            dolor
+                            sit amet consectetur.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <img class="img" src="img.png" alt="Card Image">
+                    <div class="content">
+
+                        <div class="tag1">
+                            Html
+                        </div>
+                        <div class="tag2">
+                            Css
+                        </div>
+                        <h1 class="title">Card Title</h1>
+                        <p class="desc">This is a description of the card. It contains some interesting information.
+                            Lorem ipsum
+                            dolor
+                            sit amet consectetur.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contact">
+                <h1 >Contact</h1>
+                <p>If you want to contact me click on Contact button to email me</p>
+                <a href="mailto:mkmanav906@gmail.com">
+                    <button class="btn">Contact me!</button>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy;Copyright By Mayank 2025 All Reserved
+    </footer>
+</body>
+
+</html>

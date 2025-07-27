@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50vw;
+            height: 100vh;
+            background-color: #bd7777;
+        }
+        .box:hover{
+            animation-direction:alternate;
+            /* animation-play-state: paused; */
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            /* background-color: #3498db; */
+            border-radius: 10px;
+            /* animation-delay: 1s;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(0, 2.26, 0.17, -0.4);
+            animation-iteration-count: infinite;
+            animation-name: boxAnimation;
+            animation-direction: reverse;
+            animation-play-state: running; */
+
+            /* or use shorthand method */
+            
+            /* example */
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+           /* using */
+
+           /* important!!!!! */
+           
+           /* in this forward is use to stick the animation even its done means bg color will not change back to original color  */
+
+             animation: boxAnimation 2s  ease-in-out 1 forwards ;   
+        }
+
+        @keyframes boxAnimation {
+            from {
+                /* BLANK IT OR */
+                position: relative;
+                top: 200px;
+                transform: translateY(0);
+                background-color: rgb(10, 175, 175);
+            }
+
+            to {
+                transform: scale(1.25) translateY(100px) ;
+                transform: scale(1.25);
+                background-color: RED;
+                position: relative;
+                top: -200px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="https://www.youtube.com/watch?v=cDLVIoXW-OQ&t=208s">Resume the video</a></h1>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+
+</html>

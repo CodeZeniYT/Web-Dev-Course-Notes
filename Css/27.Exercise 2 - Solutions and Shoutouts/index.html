@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selector</title>
+    <style>
+        /* Element Selector */
+
+        /* Class Selector */
+        div {
+            color: rgb(27, 3, 3);
+            background-color: rgb(255, 0, 170);
+        }
+
+        div.red {
+            color: black;
+            background-color: red;
+        }
+
+        .blue {
+            color: white;
+            background-color: blue;
+        }
+
+        /* Id Selector */
+        #green {
+            color: white;
+            background-color: green;
+        }
+
+        /* child selector */
+        div > span > p {
+            color: white;
+            background-color: black;
+        }
+
+        div > p {
+            color: white;
+            background-color: black;
+        }
+        /* desecndent selector means child element need to present in parent element */
+        div p {
+            text-align: center;
+        }
+        /* universal selector means all element will be selected */
+        *{
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+        /* Pseudo Selector  */
+        a:visited{
+            color: yellow
+        }
+
+        a:link {
+            color: green;
+        }
+
+        a:active{
+            background-color: red;
+        }
+
+        a:hover{
+            background-color: yellow;
+        }
+
+
+        p:first-child{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Pseudo selector -->
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+    <!-- normal css -->
+    <div>i am div</div>
+    <div>i am also div</div>
+
+    <!-- Class atribute selector -->
+    <div class="red">i am red div</div>
+    <div class="blue">i am blue div</div>
+
+    <!-- ID atribute selector -->
+    <div id="green">i am green div</div>
+
+    <!-- Child Selector -->
+
+    <!-- direct child -->
+    <div>
+        i am parent div
+        <p>i am child p</p>
+    </div>
+
+    <!-- indirect child -->
+    <div>
+        i am parent div
+        <span>
+            <p>i am child p</p>
+        </span>
+    </div>
+    <a href="https://chative.onrender.com">Go To Chative</a>
+</body>
+
+</html>

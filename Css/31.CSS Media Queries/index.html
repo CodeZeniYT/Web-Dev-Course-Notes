@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        :root {
+            --largebgcolor: #4bf5e7;
+            --boxcolor: rgb(12, 177, 218);
+            --content-color: #0d57f8;
+            --smallbgcolor: rgb(120, 238, 10);
+            --smallboxcolor: rgb(0, 255, 64);
+            --smallcontentcolor: #19f084;
+            --def-m-p: 3px;
+            --defsize: 344px;
+            --landscape-bgcolor:white;
+            --landscape-boxcolor:gray;
+            --landscape-content:cyan;
+
+        }
+
+        body {
+            background-color: var(--largebgcolor);
+
+        }
+
+        .boxes {
+            display: flex;
+
+        }
+
+        .box {
+            width: var(--defsize);
+            height:  var(--defsize);
+            background-color: var(--boxcolor);
+            padding: var(--def-m-p);
+            margin: var(--def-m-p);
+        }
+
+        .content {
+            background-color: var(--content-color);
+            padding: 25px;
+            border-radius: 10px;
+            font-family: cursive;
+
+        }
+
+        @media only screen and (orientation: landscape) {
+            body {
+                background-color:var(--landscape-bgcolor);
+            }
+            .content {
+                background-color: var(--landscape-content);
+            }
+
+
+            .boxes {
+                flex-direction: row-reverse;
+            }
+
+            .box {
+                background-color: var(--landscape-boxcolor);
+            }
+
+        }
+
+        @media only screen and (max-width : 425px) {
+            body {
+                background-color: var(--smallbgcolor);
+            }
+
+            .content {
+                background-color: var(--smallcontentcolor);
+            }
+
+
+            .boxes {
+                flex-direction: column-reverse;
+            }
+
+            .box {
+                background-color: var(--smallboxcolor);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur obcaecati consequuntur
+        repellat quaerat est ea, tenetur consectetur amet nobis, inventore dolorem, eos id voluptatem temporibus
+        molestiae incidunt. Dolore at perferendis ad officiis nesciunt eaque blanditiis ratione suscipit obcaecati
+        inventore. Et laudantium eius cumque modi id ipsum sequi odit inventore libero?
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

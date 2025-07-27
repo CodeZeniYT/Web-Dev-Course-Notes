@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            gap: 10px;
+            flex-wrap: wrap;
+            /* allow wrapping */
+            padding: 10px;
+            /* optional: add some breathing room */
+            box-sizing: border-box;
+            /* ensures padding doesn't break layout */
+        }
+
+        .blur {
+            filter: blur(5px);
+            /* apply blur effect */
+        }
+
+        .Brightness {
+            filter: brightness(2.5);
+            /* apply brightness effect */
+        }
+
+        .Contrast {
+            filter: contrast(2);
+            /* apply contrast effect */
+        }
+
+        .Grayscale {
+            filter: grayscale(100%);
+            /* apply grayscale effect */
+        }
+
+        .Sepia {
+            filter: sepia(100%);
+            /* apply sepia effect */
+        }
+
+        .Invert {
+            filter: invert(100%);
+            /* apply invert effect */
+        }
+
+        .Opacity {
+            filter: opacity(0.5);
+            /* apply opacity effect */
+        }
+
+        img {
+            transform: scale(1);
+            height: 10vh;
+            width: 10vw;
+            max-width: 100%;
+            /* prevent overflow on smaller screens */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        @media (max-width: 600px) {
+            img {
+                width: 40vw;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="images">
+        <img class="blur" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature" width="400">
+        <img class="Brightness" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
+        <img class="Contrast" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
+        <img class="Grayscale " src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
+        <img class="Sepia " src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
+        <img class="Invert " src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
+        <img class="Opacity " src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
+    </div>
+
+</body>
+
+</html>

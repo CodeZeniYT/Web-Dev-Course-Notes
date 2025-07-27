@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6 - Navbar using Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin-left: 5vw;
+            margin-right: 5vw;
+            max-width: 2500px;
+            text-align: center;
+            padding: 0 20px;
+            font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 500;
+            font-family: 'Open Sans', Arial, sans-serif;
+
+        }
+
+        header {
+            max-width: 2200px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        li:hover {
+            color: gray;
+        }
+
+        nav {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+        }
+
+        ul {
+            display: flex;
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        ul li {
+            list-style: none;
+            color: black;
+            display: flex;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .logo {
+            padding-top: 25px;
+            width: 200px;
+            position: relative;
+            right: 80px;
+        }
+
+        .box {
+            border: 3px solid black;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .web {
+            position: relative;
+            line-height: 100px;
+            padding: 5px;
+        }
+
+        .links {
+            position: relative;
+            left: 50px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+
+            header {
+                max-width: 1000px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+
+            }
+
+            ul {
+                display: flex;
+                gap: 25px;
+                margin-top: 10px;
+            }
+
+            .logo {
+                padding-top: 25px;
+                width: 200px;
+                position: relative;
+                right: 0px;
+            }
+
+            ul {
+                display: flex;
+                gap: 10px;
+                margin-top: 15px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="logo.png" width="auto">
+        <nav>
+
+
+            <ul>
+                <li>
+                    <select name="Products" id="Products">
+                        <option value="Products">Tools and free trail</option>
+                        <option value="Products"></option>
+                        <option value="Products"></option>
+                    </select>
+                </li>
+                <li>Pricing</li>
+                <li>Resources</li>
+                <li>Our company</li>
+
+            </ul>
+            <ul class="links">
+                <li class="box">BUY NOW</li>
+                <li class="web">
+                    <img src="web.svg" alt="web">English
+
+                </li>
+                <li><img src="search.svg" alt="search"></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
