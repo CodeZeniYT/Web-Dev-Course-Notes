@@ -1,5 +1,5 @@
 // ===============================
-// 1. Show a welcome alert
+// 1. Show a welcome alert means pop-up
 // ===============================
 alert("Hello world"); // Greets the user
 

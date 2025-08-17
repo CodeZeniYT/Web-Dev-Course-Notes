@@ -1,0 +1,12 @@
+.box {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  width: 160px;
+  height: 150px;
+  border-radius: 15px;
+  border: #2575fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: inset ;
+}

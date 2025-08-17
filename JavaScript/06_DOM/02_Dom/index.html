@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 2</title>
+    <style>
+        div {
+            background-color: rgb(209, 203, 203);
+        }
+
+        #newValue {
+            background-color: red;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .box {
+            background-color: yellow;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div name="attribute">i am sleceted by attribute</div>
+    <div class="setattribute" id="oldValue">newvalue's css by set attribute</div>
+    <div class="stylebyjs" id="stylebyjs">Styled From js</div>
+    <div class="box">
+        <h1>Inside me js added a element</h1>
+    </div>
+    <div class="remove">I am removed</div>
+    <script>
+        // for selecting attribute
+
+        let div = document.querySelector("div");
+        console.log(div.getAttribute("name"));
+
+        // for changing attribute value
+        let oldValue = document.querySelector(".setattribute"); // we chnage any attribute value from this
+        oldValue.setAttribute("id", "newValue");
+
+        //for styling any element from js
+        let box = document.querySelector(".stylebyjs");
+        box.style.backgroundColor = "blue";
+        box.style.fontSize = "32px";
+        box.style.margin = "15px";
+        //for inserting element
+        // for adding elemt we do 2 steps
+        // 1.creating element
+        let btn = document.createElement("button");
+        let text = btn.innerText = "I am added!";
+
+        //2.adding position of element
+        let container = document.querySelector(".box");
+        btn.innerHTML = `<big><strong>Hi,</strong></big> ${text}`
+        container.append(btn);
+        // container.prepend(btn)
+        // container.before(btn)
+        // container.after(btn)
+        //for deleting any elemnt
+        let deleted = document.querySelector(".remove")
+        deleted.remove()
+    </script>
+</body>
+
+</html>

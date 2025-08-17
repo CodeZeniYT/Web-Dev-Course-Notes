@@ -21,6 +21,8 @@ var $name = "$name"; // Can start with dollar sign
 // 4. Variable declarations and data types
 // ===============================
 
+// primative data type
+
 // String
 var a = "Mayank"; // string
 
@@ -72,14 +74,16 @@ let age = 14;
 let totalPrice = 45000000;
 
 // ===============================
+
 // NOTES:
 // - Use 'var', 'let', or 'const' for variable declarations.
 // - 'let' and 'const' are block-scoped, 'var' is function-scoped.
 // - typeof null returns 'object' (this is a JavaScript quirk).
-// - Arrays and objects are both of type 'object'.
+
 // ===============================
 // 7. const variable examples (block-scoped, cannot be reassigned)
 // ===============================
+
 const PI = 3.14159; // Constant value, cannot be changed
 const country = "India";
 const numbers = [10, 20, 30]; // You can't reassign 'numbers', but you can modify its contents
@@ -93,10 +97,59 @@ numbers.push(40); // Allowed
 console.log("PI:", PI);
 console.log("country:", country);
 console.log("numbers:", numbers);
+
+// =======================================
+//  8. Non Primative data type
+// ===============================
+
+// Object
+
+const Student = {
+  fullName: "Mayank Kumar",
+  Age: 14,
+  Class: 8,
+  isPassed: true,
+};
+//  we can access them by 2 methods
+// 1
+console.log(Student.Age);
+// 2
+console.log(Student["Age"]);
+//  CHANGING THE OBJECT KEY'S VALUE
+Student.Age = Student.Age - 2;
+console.log(Student.Age);
+Student.fullName = "Manav Kumar";
+console.log(Student.fullName);
+
 // NOTES:
 // - Use 'var', 'let', or 'const' for variable declarations.
 // - 'let' and 'const' are block-scoped, 'var' is function-scoped.
 // - 'const' variables cannot be reassigned, but objects/arrays declared with 'const' can be modified.
 // - typeof null returns 'object' (this is a JavaScript quirk).
 // - Arrays and objects are both of type 'object'.
+// - Arrays and objects are both of type 'object'.
+// ==============================================================
 // ===============================
+// Practice===============================
+// ===============================
+
+// Solution No.1
+
+const product = {
+  title: "Pen",
+  rating: 4,
+  peopleRated: 7002,
+  price: 270,
+  discount: 5,
+  isDeal: true,
+};
+// Solution No.2
+const profile = {
+  displayName: "Mayank Kumar",
+  userName: "Mayank",
+  isVerified: true,
+  description: "Hi, i am Mayank Kumar.",
+  post: 123,
+  followers: 123000,
+  following: 1,
+};

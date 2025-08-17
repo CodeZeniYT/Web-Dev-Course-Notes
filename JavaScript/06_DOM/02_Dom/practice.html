@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<style>
+    .content {
+        background-color: dodgerblue;
+        width: 200px;
+        height: 150px;
+        color: white;
+    }
+
+    .newContent {
+        background-color: red;
+        width: 150px;
+        height: 200px;
+        border: 2px solid gray;
+       border-radius: 25px;
+       text-align: center;
+    }
+</style>
+
+<body>
+    <p class="content">Hi i am paragraph</p>
+</body>
+<script>
+    //practice- 1
+    let btn = document.createElement("button")
+    btn.innerText = "Click Me!"
+    let place = document.querySelector("body")
+    place.prepend(btn)
+    btn.style.backgroundColor = "red";
+    btn.style.color = "white"
+    //practice-2
+    let p = document.querySelector("p");
+    p.classList.add("newContent")
+</script>
+
+</html>
